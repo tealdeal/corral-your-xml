@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+				<title>News Archive</title>
+		
+<?php 
+
+       $path = 'your path';
+       set_include_path(get_include_path() . PATH_SEPARATOR . $path);
+
+      include ('your header'); ?>
+
+</head>
+<body>	
+
+<h1 style="margin-top: 10px;">News Archive</h1>
+<a href="#">if logged in edit link</a>
+
+
+<script>
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.open("GET","news.xml",false);
+xmlhttp.send();
+xmlDoc=xmlhttp.responseXML;
+
+var x=xmlDoc.getElementsByTagName("news");
+for (i=0;i<x.length;i++)
+  {
+  document.write("<p>");
+  document.write(x[i].getElementsByTagName("date")[0].childNodes[0].nodeValue);
+  document.write(x[i].getElementsByTagName("content")[0].childNodes[0].nodeValue);
+  document.write("</p>");
+  }
+</script>
+
+
+
+</body>
+</html>
+

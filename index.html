@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+				<title>News Archive</title>
+
+
+<?php 
+
+       $path = 'your path';
+       set_include_path(get_include_path() . PATH_SEPARATOR . $path);
+
+      include ('the header'); ?>
+
+</head>
+<body>	
+
+
+<h1 style="margin-top: 10px;">News Archive</h1>
+<a href="../newsarchive.html">archive </a>|<a href="#"> edit </a>|<a href="news_add.html"> add entry </a>| <a href="#"> news home</a>
+
+
+<br/>
+The pages above allow you to create news and edit news in the archive as well as select what is currently featured on the front page.
+<br/><br/>
+The front page feature isn't "live" yet, so instead below you will find the example of what the featured content would be listed as:
+<?php include ('../featnews.php'); ?>
+<br/><br/>
+This news uses XML.  The xml feed is available at: <a href="../news.xml" target="_blank">news.xml</a> and can be read into RSS feed readers.
+<br/><br/>
+<?php include ('news_edit.php'); ?>
+
+
+</body>
+</html>
+
+
+
+
