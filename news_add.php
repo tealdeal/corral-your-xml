@@ -2,7 +2,7 @@
 <form action="news_save2.php" method="POST">
 <?php
 
-       $path = 'your path';
+       $path = '/corral-your-xml/';
 
        set_include_path(get_include_path() . PATH_SEPARATOR . $path);
 
