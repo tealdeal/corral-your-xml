@@ -1,0 +1,49 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+				<title>News Archive</title>
+		
+<?php 
+
+       $path = 'your path';
+       set_include_path(get_include_path() . PATH_SEPARATOR . $path);
+
+      include ('header'); ?>
+
+</head>
+<body>	
+
+
+<script type="text/javascript" src="../nicedit/nicEdit.js"></script> 
+<script type="text/javascript">
+
+	bkLib.onDomLoaded(function() { nicEditors.allTextAreas() });
+
+</script>
+	
+
+<h1 style="margin-top: 10px;">New News</h1>
+<a href="../newsarchive.html">archive </a>|<a href="news_edit.html"> edit </a>|<a href="news_add.html"> add entry </a>
+
+
+
+<br/>
+Below you can add a new entry to the news.  This will be appended as the most current entry and appear on the front page.  Please add a separate title/date for future categorization!
+<br/><br/>
+Editing this new entry and older entries is available on a separate page.<br/>
+<br/>
+Functions not currently available via this form include reordering of entries, scientific symbols, html view, and file uploading.  Inserting scientific symbols via copy-paste may work.
+<br/><br/>
+<?php include ('news_add.php'); ?>
+
+
+
+</body>
+</html>
+
+
+
+

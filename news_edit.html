@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+				<title>News Archive</title>
+		
+<?php 
+
+       $path = 'your path';
+       set_include_path(get_include_path() . PATH_SEPARATOR . $path);
+
+      include ('your header'); ?>
+
+</head>
+<body>	
+
+	
+
+<h1 style="margin-top: 10px;">News Archive</h1>
+<a href="newsarchive.html">archive</a>|<a href="#">edit</a>|<a href="add.html">add</a>
+
+
+
+<br/>
+Below you can edit the dates and news that appears in the archive.  Dates don't have to be dates, they can be titles instead.  Available functions include: bold, underline, italic, link and unlink.  Links can open in new tags
+<br/><br/>
+Adding a new entry is on a separate page for simplicity <br/>
+<br/>
+This news uses XML.  The xml feed is available at: <a href="news.xml" target="_blank">news.xml</a> and can be read into RSS feed readers.
+<br/><br/>
+
+<?php include ('news_edit.php'); ?>
+
+
+
+</body>
+</html>
+
+
+
